@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#menu {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#game {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#problem {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#answer {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+#submitBtn, #nextBtn {
+    padding: 15px;
+    background-color: #fd7e14; /* Оранжевый цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Расположить кнопку на всю ширину блока */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+#submitBtn:hover, #nextBtn:hover {
+    background-color: #fa7b00; /* Цвет кнопки при наведении */
+}
+
+#score {
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#message {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.correct {
+    background-color: #d4edda; /* Зеленый фон для Correct! */
+    color: #155724; /* Темно-зеленый текст */
+}
+
+.incorrect {
+    background-color: #f8d7da; /* Красный фон для Incorrect! */
+    color: #721c24; /* Темно-красный текст */
+}
+
+.score-animation {
+    animation: scoreAnimation 0.5s ease;
+}
+
+.message-animation {
+    animation: messageAnimation 0.5s ease;
+}
+
+@keyframes scoreAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes messageAnimation {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
